@@ -10,6 +10,7 @@
         {
             Bootstrapper.BootstrapperTasks
                 .Include<RegisterControllers>()
+                .Include<RegisterModelMetadata>()
                 .Include<RegisterRoutes>()
                 .Include<RegistreBundles>();
         }
