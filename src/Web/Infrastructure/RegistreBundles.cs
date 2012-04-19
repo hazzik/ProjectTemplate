@@ -39,6 +39,7 @@
             commonScriptsBundle.AddFile("~/Scripts/jquery.validate.unobtrusive.min.js");
             commonScriptsBundle.AddFile("~/Scripts/jquery.unobtrusive-ajax.min.js");
             commonScriptsBundle.AddFile("~/Scripts/bootstrap.min.js");
+            commonScriptsBundle.AddFile("~/Scripts/jquery.livequery.min.js");
             commonScriptsBundle.Orderer = nullOrderer;
 
             BundleTable.Bundles.Add(commonScriptsBundle);
