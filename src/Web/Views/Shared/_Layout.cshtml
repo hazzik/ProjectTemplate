@@ -6,10 +6,10 @@
         <title>@ViewBag.Title</title>
         <link href="@BundleTable.Bundles.ResolveBundleUrl("~/CommonStyles")" rel="stylesheet" type="text/css" />
         <script src="@BundleTable.Bundles.ResolveBundleUrl("~/Modernizr")" type="text/javascript"> </script>
+        <script src="@BundleTable.Bundles.ResolveBundleUrl("~/CommonScripts")" type="text/javascript"></script>
     </head>
 
     <body>
         @RenderBody()
-        <script src="@BundleTable.Bundles.ResolveBundleUrl("~/CommonScripts")" type="text/javascript"></script>
     </body>
 </html>

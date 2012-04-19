@@ -12,9 +12,9 @@
         public override TaskContinuation Execute()
         {
             var cssTransformer = new CssTransformer(new YuiCssMinifier(), new[] {new LessTranslator()});
-            cssTransformer.ForceReleaseMode();
+//            cssTransformer.ForceReleaseMode();
             var jsTransformer = new JsTransformer(new YuiJsMinifier());
-            jsTransformer.ForceReleaseMode();
+//            jsTransformer.ForceReleaseMode();
             var nullOrderer = new NullOrderer();
 
             var commonStylesBundle = new Bundle("~/CommonStyles", cssTransformer);
@@ -40,6 +40,7 @@
             commonScriptsBundle.AddFile("~/Scripts/jquery.unobtrusive-ajax.min.js");
             commonScriptsBundle.AddFile("~/Scripts/bootstrap.min.js");
             commonScriptsBundle.AddFile("~/Scripts/jquery.livequery.min.js");
+            commonScriptsBundle.AddFile("~/Scripts/jquery.unobtrusive.js");
             commonScriptsBundle.Orderer = nullOrderer;
 
             BundleTable.Bundles.Add(commonScriptsBundle);

@@ -1,1 +1,14 @@
 ﻿Welcome to empty MVC3 application
+@using(Html.BeginForm())
+{
+    <div>
+        @Html.ValidationMessage("TextBox")
+        @Html.TextBox("TextBox", null, new {data_val = "true", data_val_required = "Field is required"})
+    </div>
+    <div>
+        @Html.ValidationMessage("DropDownList")
+        @Html.DropDownList("DropDownList", new SelectList(new[] { "1", "2" }), "Please select", new { data_val = "true", data_val_required = "required" })    
+    </div>
+	
+    <input type="submit" value="OK"/>
+}
