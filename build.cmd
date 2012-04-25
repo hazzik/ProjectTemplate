@@ -6,6 +6,6 @@ echo Restoring nuget packages
 call nuget install packages.config -o ..\packages
 popd
 
-call %psake%
+call %psake% %%*
 
 pause
