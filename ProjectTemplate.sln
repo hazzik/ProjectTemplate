@@ -12,6 +12,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\Web\Web.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{0CC158FE-BD41-46F3-AD19-298630975648}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FBC4B50-304C-4793-BC00-A2F379D9EB4C}"
+	ProjectSection(SolutionItems) = preProject
+		default.ps1 = default.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "src\Migrations\Migrations.csproj", "{CC5D19A4-DF07-4CE0-AD2F-3908A93F78BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +33,10 @@ Global
 		{0CC158FE-BD41-46F3-AD19-298630975648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CC158FE-BD41-46F3-AD19-298630975648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CC158FE-BD41-46F3-AD19-298630975648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5D19A4-DF07-4CE0-AD2F-3908A93F78BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5D19A4-DF07-4CE0-AD2F-3908A93F78BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5D19A4-DF07-4CE0-AD2F-3908A93F78BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5D19A4-DF07-4CE0-AD2F-3908A93F78BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
