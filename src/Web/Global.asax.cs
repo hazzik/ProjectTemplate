@@ -12,7 +12,7 @@
                 .Include<RegisterControllers>()
                 .Include<RegisterModelMetadata>()
                 .Include<RegisterRoutes>()
-                .Include<RegistreBundles>();
+                .Include<RegisterBundles>();
         }
     }
 }

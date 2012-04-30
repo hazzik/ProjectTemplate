@@ -108,7 +108,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RegisterRoutes.cs" />
-    <Compile Include="Infrastructure\RegistreBundles.cs" />
+    <Compile Include="Infrastructure\RegisterBundles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
