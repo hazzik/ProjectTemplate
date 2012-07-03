@@ -19,15 +19,20 @@ else
         }
         else
         {
-            if (string.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString()) == false)
-            {
-                <div class="editor-label">
-                    @Html.Label(prop.PropertyName) 
+            <div class="control-group">
+                @{
+                    var label = Html.Label(prop.PropertyName);
+                    if (string.IsNullOrEmpty(label.ToHtmlString()) == false)
+                    {
+                        <div class="control-label">
+                            @label 
+                        </div>
+                    }
+                }
+                <div class="controls">
+                    @Html.Editor(prop.PropertyName)  
+                    @Html.ValidationMessage(prop.PropertyName) 
                 </div>
-            }
-            <div class="editor-field">
-                @Html.Editor(prop.PropertyName)  
-                @Html.ValidationMessage(prop.PropertyName) 
             </div>
         }
     }

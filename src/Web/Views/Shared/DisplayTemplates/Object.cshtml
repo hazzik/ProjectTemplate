@@ -19,14 +19,19 @@ else
         }
         else
         {
-            if (string.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString()) == false)
-            {
-                <div class="display-label">
-                    @Html.Label(prop.PropertyName) 
+            <div class="control-group">
+                @{
+                    var label = Html.Label(prop.PropertyName);
+                    if (string.IsNullOrEmpty(label.ToHtmlString()) == false)
+                    {
+                        <div class="control-label">
+                            @label 
+                        </div>
+                    }
+                }
+                <div class="controls">
+                    @Html.Display(prop.PropertyName)  
                 </div>
-            }
-            <div class="display-field">
-                @Html.Display(prop.PropertyName)  
             </div>
         }
     }
