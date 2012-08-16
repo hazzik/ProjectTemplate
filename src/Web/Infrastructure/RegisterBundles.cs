@@ -32,7 +32,7 @@
             BundleTable.Bundles.Add(new Bundle("~/CommonScripts", jsTransformer)
                 {
                     Orderer = nullOrderer
-                }.Include("~/Scripts/jquery-1.7.2.min.js",
+                }.Include("~/Scripts/jquery-1.8.0.min.js",
                           "~/Scripts/jquery-ui-1.8.22.min.js",
                           "~/Scripts/jquery.validate.min.js",
                           "~/Scripts/jquery.validate.unobtrusive.min.js",
