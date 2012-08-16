@@ -16,13 +16,15 @@
             var jsTransformer = new JsTransformer(new YuiJsMinifier());
             var nullOrderer = new NullOrderer();
 
+            BundleTable.EnableOptimizations = true;
+
             BundleTable.Bundles.Add(new Bundle("~/CommonStyles", cssTransformer)
                 {
                     Orderer = nullOrderer
-                }.Include("~/Content/site.less",
-                          "~/Content/themes/base/jquery-ui.css",
+                }.Include("~/Content/themes/base/jquery-ui.css",
                           "~/Content/bootstrap.min.css",
-                          "~/Content/bootstrap-responsive.min.css"));
+                          "~/Content/bootstrap-responsive.min.css",
+                          "~/Content/site.less"));
 
             BundleTable.Bundles.Add(new Bundle("~/Modernizr", jsTransformer)
                 {
