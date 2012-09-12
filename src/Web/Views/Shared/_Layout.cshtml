@@ -9,7 +9,9 @@
     </head>
 
     <body>
-        @RenderBody()
-        <script src="@BundleTable.Bundles.ResolveBundleUrl("~/CommonScripts")" type="text/javascript"></script>
+        <div class="content">
+            @RenderBody()
+            <script src="@BundleTable.Bundles.ResolveBundleUrl("~/CommonScripts")" type="text/javascript"></script>
+        </div>
     </body>
 </html>
