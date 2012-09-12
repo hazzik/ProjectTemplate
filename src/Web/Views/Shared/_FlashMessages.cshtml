@@ -1,0 +1,10 @@
+﻿@using MvcExtensions
+@{
+    foreach (var pair in new FlashStorage(ViewContext.TempData).Messages)
+    {
+        <div class="alert alert-@pair.Key">
+            <a class="close" data-dismiss="alert" href="#">&times;</a>
+            @pair.Value
+        </div>
+    }
+}
