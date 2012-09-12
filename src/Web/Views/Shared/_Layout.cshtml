@@ -10,6 +10,7 @@
 
     <body>
         <div class="content">
+            @Html.Partial("_FlashMessages")
             @RenderBody()
             <script src="@BundleTable.Bundles.ResolveBundleUrl("~/CommonScripts")" type="text/javascript"></script>
         </div>
