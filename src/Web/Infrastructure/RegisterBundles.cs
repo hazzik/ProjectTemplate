@@ -29,13 +29,13 @@
             BundleTable.Bundles.Add(new Bundle("~/Modernizr", jsTransformer)
                 {
                     Orderer = nullOrderer
-                }.Include("~/Scripts/modernizr-2.5.3.js"));
+                }.Include("~/Scripts/modernizr-2.6.2.js"));
 
             BundleTable.Bundles.Add(new Bundle("~/CommonScripts", jsTransformer)
                 {
                     Orderer = nullOrderer
-                }.Include("~/Scripts/jquery-1.8.0.min.js",
-                          "~/Scripts/jquery-ui-1.8.22.min.js",
+                }.Include("~/Scripts/jquery-1.8.1.min.js",
+                          "~/Scripts/jquery-ui-1.8.23.min.js",
                           "~/Scripts/jquery.validate.min.js",
                           "~/Scripts/jquery.validate.unobtrusive.min.js",
                           "~/Scripts/jquery.unobtrusive-ajax.min.js",
