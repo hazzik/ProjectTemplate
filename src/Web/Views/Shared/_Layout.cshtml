@@ -4,15 +4,18 @@
     <head>
         <meta charset="utf-8" />
         <title>@ViewBag.Title</title>
-        <link href="@BundleTable.Bundles.ResolveBundleUrl("~/CommonStyles")" rel="stylesheet" type="text/css" />
-        <script src="@BundleTable.Bundles.ResolveBundleUrl("~/Modernizr")" type="text/javascript"> </script>
+        @Styles.Render("~/CommonStyles") 
+        @Scripts.Render("~/Modernizr")
+@*        <link href="@Styles.Render("~/CommonStyles")" rel="stylesheet" type="text/css" />*@
+@*        <script src="@Scripts.Render("~/Modernizr")" type="text/javascript"> </script>*@
     </head>
 
     <body>
         <div class="content">
             @Html.Partial("_FlashMessages")
             @RenderBody()
-            <script src="@BundleTable.Bundles.ResolveBundleUrl("~/CommonScripts")" type="text/javascript"></script>
+            @Scripts.Render("~/CommonScripts")
+@*            <script src="@Scripts.Render("~/CommonScripts")" type="text/javascript"></script>*@
         </div>
     </body>
 </html>

@@ -1,45 +1,39 @@
 ﻿namespace Web.Infrastructure
 {
     using System.Web.Optimization;
-    using BundleTransformer.Core.Orderers;
-    using BundleTransformer.Core.Transformers;
-    using BundleTransformer.Core.Translators;
-    using BundleTransformer.Less.Translators;
-    using BundleTransformer.Yui.Minifiers;
+    using System.Web.Optimization.Less;
     using MvcExtensions;
 
     public class RegisterBundles : BootstrapperTask
     {
         public override TaskContinuation Execute()
         {
-            var cssTransformer = new CssTransformer(new YuiCssMinifier(), new ITranslator[] {new LessTranslator()});
-            var jsTransformer = new JsTransformer(new YuiJsMinifier());
-            var nullOrderer = new NullOrderer();
-
             BundleTable.EnableOptimizations = true;
 
-            BundleTable.Bundles.Add(new Bundle("~/CommonStyles", cssTransformer)
+            BundleTable.Bundles.Add(new StyleBundle("~/CommonStyles")
                 {
-                    Orderer = nullOrderer
+                    Transforms =
+                        {
+                            new LessTransformer(),
+                        }
                 }.Include("~/Content/themes/base/jquery-ui.css",
                           "~/Content/bootstrap.min.css",
                           "~/Content/bootstrap-responsive.min.css",
                           "~/Content/site.less"));
 
-            BundleTable.Bundles.Add(new Bundle("~/Modernizr", jsTransformer)
-                {
-                    Orderer = nullOrderer
-                }.Include("~/Scripts/modernizr-{version}.js"));
+            BundleTable.Bundles.Add(new ScriptBundle("~/Modernizr")
+                .Include("~/Scripts/modernizr-{version}.js"));
 
-            BundleTable.Bundles.Add(new Bundle("~/CommonScripts", jsTransformer)
-                {
-                    Orderer = nullOrderer
-                }.Include("~/Scripts/jquery-{version}.min.js",
-                          "~/Scripts/jquery-ui-{version}.min.js",
-                          "~/Scripts/jquery.validate.min.js",
-                          "~/Scripts/jquery.validate.unobtrusive.min.js",
-                          "~/Scripts/jquery.unobtrusive-ajax.min.js",
-                          "~/Scripts/bootstrap.min.js"));
+
+            BundleTable.Bundles.Add(new ScriptBundle("~/CommonScripts")
+                .Include("~/Scripts/jquery-{version}.min.js",
+                            "~/Scripts/jquery-ui-{version}.min.js",
+                            "~/Scripts/jquery.validate.min.js",
+                            "~/Scripts/jquery.validate.unobtrusive.min.js",
+                            "~/Scripts/jquery.unobtrusive-ajax.min.js",
+                            "~/Scripts/bootstrap.min.js"));
+
+            BundleTable.Bundles.UseCdn = true;
 
             return TaskContinuation.Continue;
         }
