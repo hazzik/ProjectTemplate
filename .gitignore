@@ -6,3 +6,9 @@ _ReSharper.*
 packages/*/
 artifacts/*
 build/*
+/Backup
+
+/_UpgradeReport_Files
+
+/UpgradeLog.XML
+/UpgradeLog.htm
