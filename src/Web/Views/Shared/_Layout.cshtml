@@ -3,11 +3,10 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>@ViewBag.Title</title>
         @Styles.Render("~/CommonStyles") 
         @Scripts.Render("~/Modernizr")
-@*        <link href="@Styles.Render("~/CommonStyles")" rel="stylesheet" type="text/css" />*@
-@*        <script src="@Scripts.Render("~/Modernizr")" type="text/javascript"> </script>*@
     </head>
 
     <body>
@@ -15,7 +14,6 @@
             @Html.Partial("_FlashMessages")
             @RenderBody()
             @Scripts.Render("~/CommonScripts")
-@*            <script src="@Scripts.Render("~/CommonScripts")" type="text/javascript"></script>*@
         </div>
     </body>
 </html>
