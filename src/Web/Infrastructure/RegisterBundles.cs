@@ -1,7 +1,6 @@
 ﻿namespace Web.Infrastructure
 {
     using System.Web.Optimization;
-    using System.Web.Optimization.Less;
     using MvcExtensions;
 
     public class RegisterBundles : BootstrapperTask
@@ -14,7 +13,7 @@
                 {
                     Transforms =
                         {
-                            new LessTransformer(),
+                            new LessTransform(),
                         }
                 }.Include("~/Content/themes/base/jquery-ui.css",
                           "~/Content/bootstrap.min.css",
