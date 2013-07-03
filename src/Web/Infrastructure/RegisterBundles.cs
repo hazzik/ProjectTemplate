@@ -9,7 +9,7 @@
         {
             BundleTable.EnableOptimizations = true;
 
-            BundleTable.Bundles.Add(new StyleBundle("~/CommonStyles")
+            BundleTable.Bundles.Add(new StyleBundle("~/Content/CommonStyles")
                 {
                     Transforms =
                         {
@@ -18,13 +18,14 @@
                 }.Include("~/Content/themes/base/jquery-ui.css",
                           "~/Content/bootstrap.min.css",
                           "~/Content/bootstrap-responsive.min.css",
+                          "~/Content/font-awesome.min.css",
                           "~/Content/site.less"));
 
-            BundleTable.Bundles.Add(new ScriptBundle("~/Modernizr")
+            BundleTable.Bundles.Add(new ScriptBundle("~/Scripts/Modernizr")
                 .Include("~/Scripts/modernizr-{version}.js"));
 
 
-            BundleTable.Bundles.Add(new ScriptBundle("~/CommonScripts")
+            BundleTable.Bundles.Add(new ScriptBundle("~/Scripts/CommonScripts")
                 .Include("~/Scripts/jquery-{version}.min.js",
                             "~/Scripts/jquery-ui-{version}.min.js",
                             "~/Scripts/jquery.validate.min.js",

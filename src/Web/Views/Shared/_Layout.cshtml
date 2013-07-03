@@ -5,15 +5,18 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>@ViewBag.Title</title>
-        @Styles.Render("~/CommonStyles") 
-        @Scripts.Render("~/Modernizr")
+        @Styles.Render("~/Content/CommonStyles")
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="~/Content/font-awesome-ie7.min.css">
+        <![endif]--> 
+        @Scripts.Render("~/Scripts/Modernizr")
     </head>
 
     <body>
         <div class="content">
             @Html.Partial("_FlashMessages")
             @RenderBody()
-            @Scripts.Render("~/CommonScripts")
+            @Scripts.Render("~/Scripts/CommonScripts")
         </div>
     </body>
 </html>
