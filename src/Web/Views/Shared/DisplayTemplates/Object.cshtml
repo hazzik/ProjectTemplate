@@ -1,6 +1,6 @@
 ﻿@{
     Func<ModelMetadata, bool> shouldShow = metadata =>
-                                           metadata.ShowForEdit
+                                           metadata.ShowForDisplay
                                            && !ViewData.TemplateInfo.Visited(metadata);
 }
 @if (ViewData.TemplateInfo.TemplateDepth > 5)
@@ -15,7 +15,7 @@ else
     {
         if (prop.HideSurroundingHtml)
         {
-            @Html.Editor(prop.PropertyName)
+            @Html.Display(prop.PropertyName)
         }
         else
         {
